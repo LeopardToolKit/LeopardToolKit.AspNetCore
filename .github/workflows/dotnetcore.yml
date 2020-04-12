@@ -1,0 +1,36 @@
+name: nuget publish
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.101
+    - name: Install dependencies
+      run: dotnet restore src/LeopardToolKit.AspNetCore.sln
+    - name: Build
+      run: dotnet build src/LeopardToolKit.AspNetCore.sln --configuration Release --no-restore
+    - name: Test
+      run: dotnet test src/LeopardToolKit.AspNetCore/LeopardToolKit.AspNetCore.csproj --no-restore --verbosity normal
+      
+    - name: Publish NuGet
+      uses: rohith/publish-nuget@v2.2.1
+      with:
+        PROJECT_FILE_PATH: src/LeopardToolKit.AspNetCore/LeopardToolKit.AspNetCore.csproj
+        TAG_COMMIT: false
+        VERSION_FILE_PATH: src/LeopardToolKit.AspNetCore/LeopardToolKit.AspNetCore.csproj
+        VERSION_REGEX: <Version>(.*)<\/Version>
+        NUGET_KEY: ${{ secrets.NugetKey }} 
+
