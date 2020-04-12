@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30002.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LeopardToolKit.AspNetCore", "LeopardToolKit.AspNetCore\LeopardToolKit.AspNetCore.csproj", "{868152EE-00E0-41BA-9AF0-3EA6638673D2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{868152EE-00E0-41BA-9AF0-3EA6638673D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{868152EE-00E0-41BA-9AF0-3EA6638673D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{868152EE-00E0-41BA-9AF0-3EA6638673D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{868152EE-00E0-41BA-9AF0-3EA6638673D2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5973B92B-F2BC-4B89-A1EB-2B0872901480}
+	EndGlobalSection
+EndGlobal
