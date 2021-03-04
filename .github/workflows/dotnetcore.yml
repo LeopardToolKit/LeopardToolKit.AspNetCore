@@ -15,19 +15,17 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 3.1.101
+        dotnet-version: 5.0.*
     - name: Install dependencies
       run: dotnet restore src/LeopardToolKit.AspNetCore.sln
     - name: Build
       run: dotnet build src/LeopardToolKit.AspNetCore.sln --configuration Release --no-restore
-    - name: Test
-      run: dotnet test src/LeopardToolKit.AspNetCore/LeopardToolKit.AspNetCore.csproj --no-restore --verbosity normal
       
     - name: Publish NuGet
       uses: rohith/publish-nuget@v2.2.1
       with:
         PROJECT_FILE_PATH: src/LeopardToolKit.AspNetCore/LeopardToolKit.AspNetCore.csproj
-        TAG_COMMIT: false
+        TAG_COMMIT: true
         VERSION_FILE_PATH: src/LeopardToolKit.AspNetCore/LeopardToolKit.AspNetCore.csproj
         VERSION_REGEX: <Version>(.*)<\/Version>
         NUGET_KEY: ${{ secrets.NugetKey }} 
