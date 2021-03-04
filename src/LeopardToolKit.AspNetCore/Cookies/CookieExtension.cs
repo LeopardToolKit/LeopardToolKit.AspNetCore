@@ -1,8 +1,9 @@
 ﻿using LeopardToolKit.AspNetCore.Cookies;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Microsoft.Extensions.DependencyInjection
+namespace LeopardToolKit.AspNetCore
 {
-    public static partial class ServiceCollectionExtension
+    public static partial class CookieExtension
     {
         public static IServiceCollection AddCookieManager(this IServiceCollection services)
         {
