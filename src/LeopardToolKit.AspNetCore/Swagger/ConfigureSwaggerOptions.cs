@@ -47,7 +47,11 @@ namespace LeopardToolKit.AspNetCore.Swagger
                 string location = Assembly.GetEntryAssembly().Location;
                 xmlPath = Path.Combine(Path.GetDirectoryName(Uri.UnescapeDataString(location)), $"{this.swaggerOption.CommentsFilename}.xml");
             }
-            options.IncludeXmlComments(xmlPath);
+            if (File.Exists(xmlPath))
+            {
+                options.IncludeXmlComments(xmlPath);
+            }
+            
             if (swaggerOption.EnableVersion)
             {
                 var provider = _serviceProvider.GetRequiredService<IApiVersionDescriptionProvider>();

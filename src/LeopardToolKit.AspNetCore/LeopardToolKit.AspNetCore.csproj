@@ -3,13 +3,15 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
-    <Version>1.3.0</Version>
+    <Version>2.0.0</Version>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <RepositoryUrl>https://github.com/LeopardToolKit/LeopardToolKit.AspNetCore</RepositoryUrl>
     <RepositoryType>Git</RepositoryType>
     <PackageProjectUrl>https://github.com/LeopardToolKit/LeopardToolKit.AspNetCore</PackageProjectUrl>
-    <Authors>LeopardToolKit</Authors>
+    <Authors>Gary Zhu</Authors>
     <OutputType>Library</OutputType>
+    <Product>LeopardToolKit</Product>
+    <Company>LeopardToolKit</Company>
   </PropertyGroup>
   <ItemGroup>
 	<PackageReference Include="Swashbuckle.AspNetCore" Version="6.0.7" />
