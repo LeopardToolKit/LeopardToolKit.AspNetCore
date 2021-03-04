@@ -8,7 +8,6 @@ namespace LeopardToolKit.AspNetCore.Cookies
 
         public CookieManager(IHttpContextAccessor httpContextAccessor)
         {
-            httpContextAccessor.ThrowIfNull(nameof(httpContextAccessor));
             //https://docs.microsoft.com/en-us/aspnet/core/fundamentals/http-context?view=aspnetcore-3.0#use-httpcontext-from-custom-components
             this.httpContext = httpContextAccessor.HttpContext;
         }
